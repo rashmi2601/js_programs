@@ -341,6 +341,49 @@ if (isElementInArray) {
 
 /* 
 1.Write a function that capitalizes the first letter of each word in a sentence.
+function capitalizeWords(sentence) {
+  return sentence
+    .split(" ")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+}
+
+const originalSentence = "welcome to my github world";
+
+// Call the function to capitalize the first letter of each word
+const capitalizedSentence = capitalizeWords(originalSentence);
+
+console.log(capitalizedSentence);
+
+
+
+*/
+
+
+
+/*
+2.Develop a program that counts the number of vowels in a given string.
+
+
+
+function countVowels(inputString) {
+  const vowels = "aeiouAEIOU";
+  let vowelCount = 0;
+
+  for (let char of inputString) {
+    if (vowels.includes(char)) {
+      vowelCount++;
+    }
+  }
+
+  return vowelCount;
+}
+
+const inputString = "Hello, welcome to rashmi github account ";
+
+const result = countVowels(inputString);
+
+console.log(`Number of vowels: ${result}`);
 
 
 
@@ -349,6 +392,133 @@ if (isElementInArray) {
 
 
 
+/*
+3.Create a function that removes whitespace from both ends of a string.
+function removeWhitespace(inputString) {
+    return inputString.trim();
+}
+
+
+const stringWithWhitespace = '   Hello, there!   ';
+
+const result = removeWhitespace(stringWithWhitespace);
+
+console.log(`Original string: '${stringWithWhitespace}'`);
+console.log(`String without leading and trailing whitespace: '${result}'`);
+
+ */
+
+
+
+/* 4.Write a program that checks if a string contains a specific substring.
+function containsSubstring(mainString, substring) {
+    return mainString.includes(substring);
+}
+
+
+const mainString = 'Hello, world!';
+const substringToCheck = 'world';
+
+const contains = containsSubstring(mainString, substringToCheck);
+
+if (contains) {
+    console.log(`The string '${mainString}' contains the substring '${substringToCheck}'.`);
+} else {
+    console.log(`The string '${mainString}' does not contain the substring '${substringToCheck}'.`);
+}
+
+ */
+
+
+
+/*5.Implement a function to reverse words in a sentence without changing their order.
+
+function reverseWords(sentence) {
+    // Split the sentence into an array of words
+    const wordsArray = sentence.split(' ');
+
+    // Reverse the order of the words in the array
+    const reversedArray = wordsArray.reverse();
+
+    // Join the reversed array back into a sentence
+    const reversedSentence = reversedArray.join(' ');
+
+    return reversedSentence;
+}
+
+
+const originalSentence = 'JavaScript is a powerful language';
+
+const reversedSentence = reverseWords(originalSentence);
+
+console.log(`Original sentence: '${originalSentence}'`);
+console.log(`Reversed sentence: '${reversedSentence}'`);
+*/
+
+
+// BOOLEANS
+/*
+1.Create a function that checks if two boolean values are not equal.
+function areBooleansNotEqual(value1, value2) {
+    return value1 !== value2;
+}
+
+
+const bool1 = true;
+const bool2 = false;
+
+const notEqual = areBooleansNotEqual(bool1, bool2);
+
+if (notEqual) {
+    console.log('The boolean values are not equal.');
+} else {
+    console.log('The boolean values are equal.');
+}
+
+
+*/
+
+
+
+
+/*
+2.Write a program that uses the && operator to determine if a person is eligible for a discount (age > 60 and has a membership).
+
+function isEligibleForDiscount(age, hasMembership) {
+  return age > 60 && hasMembership;
+}
+
+const personAge = 20;
+const personHasMembership = true;
+
+if (isEligibleForDiscount(personAge, personHasMembership)) {
+  console.log("The person is eligible for a discount.");
+} else {
+  console.log("The person is not eligible for a discount.");
+}
+ 
+
+
+
+*/
+
+
+
+
+/*
+3.Implement a function that converts a truthy value to true and a falsy value to false.
+
+
+
+ */
+
+
+
+/*
+ 4.Write a program that uses the || operator to check if a user has completed either Course A or Course B.
+
+*/
+/* */
 /* */
 /* */
 /* */
