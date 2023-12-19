@@ -516,9 +516,23 @@ if (isEligibleForDiscount(personAge, personHasMembership)) {
 
 /*
  4.Write a program that uses the || operator to check if a user has completed either Course A or Course B.
+ 
+const userCompletedCourses = ['Course C', 'Course A', 'Course D'];
+
+if (userCompletedCourses.includes('Course A') || userCompletedCourses.includes('Course B')) {
+    console.log('The user has completed either Course A or Course B.');
+} else {
+    console.log('The user has not completed either Course A or Course B.');
+}
+
 
 */
-/* */
+
+
+//SYMBOL
+
+/*1.
+ */
 /* */
 /* */
 /* */
