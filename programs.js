@@ -531,9 +531,354 @@ if (userCompletedCourses.includes('Course A') || userCompletedCourses.includes('
 
 //SYMBOL
 
-/*1.
+/*1.Use a symbol as a property key in an object and retrieve its value.
+
+// Create a symbol
+const mySymbol = Symbol('mySymbol');
+
+// Create an object with a symbol as a property key
+const myObject = {
+  [mySymbol]: 'Hello, this is the value for mySymbol'
+};
+
+// Retrieve the value using the symbol as a key
+const retrievedValue = myObject[mySymbol];
+
+console.log(retrievedValue); // Output: Hello, this is the value for mySymbol
+
+
  */
-/* */
-/* */
-/* */
-/* */
+
+
+/* 
+2.Create a function that returns a unique symbol each time it is called.
+function generateUniqueSymbol() {
+  return Symbol();
+}
+
+
+const symbol1 = generateUniqueSymbol('rashmi');
+const symbol2 = generateUniqueSymbol('rashmi');
+
+console.log(symbol1 === symbol2); // Output: false (each call generates a new unique symbol)
+
+
+
+*/
+
+
+
+/* 
+3.Write a program that compares two symbols for equality.
+// Create two symbols
+const symbol1 = Symbol('rashmi');
+const symbol2 = Symbol('rashmi'); // Different symbol with the same description
+
+// Compare symbols for equality
+const areSymbolsEqual = symbol1 === symbol2;
+
+// Output the result
+console.log(`Are symbols equal? ${areSymbolsEqual}`); // Output: Are symbols equal? false
+
+
+
+*/
+
+
+
+
+/*
+4.Implement a function that converts a symbol to a string.
+function convertSymbolToString(input) {
+  if (typeof input === "symbol") {
+    return input.toString();
+  } else {
+    return String(input); // Convert non-symbol input to string
+  }
+}
+
+const symbolInput = Symbol("rashmi");
+const nonSymbolInput = 25;
+
+const symbolString = convertSymbolToString(symbolInput);
+const nonSymbolString = convertSymbolToString(nonSymbolInput);
+
+console.log(symbolString); // Output: Symbol(exampleSymbol)
+console.log(nonSymbolString); // Output: 42 (converted to string)
+console.log(typeof nonSymbolString);
+
+
+*/
+
+
+
+// MAP
+
+/* 
+1.Create a Map to store information about different countries (e.g., capital, population).
+
+// Create a Map to store information about countries
+const countryInfoMap = new Map();
+
+// Add information about countries to the Map
+countryInfoMap.set('Canada', {
+  capital: 'Ottawa',
+  population: 37742154,
+  language: 'English and French',
+  currency: 'Canadian Dollar (CAD)'
+});
+
+countryInfoMap.set('Germany', {
+  capital: 'Berlin',
+  population: 83783942,
+  language: 'German',
+  currency: 'Euro (EUR)'
+});
+
+countryInfoMap.set('Japan', {
+  capital: 'Tokyo',
+  population: 126476461,
+  language: 'Japanese',
+  currency: 'Japanese Yen (JPY)'
+});
+
+// Access information about a specific country
+const germanyInfo = countryInfoMap.get('Germany');
+console.log('Information about Germany:', germanyInfo);
+
+// Access information about another country
+const japanInfo = countryInfoMap.get('Japan');
+console.log('Information about Japan:', japanInfo);
+
+
+
+*/
+
+
+/* 
+2.Write a program that checks if a specific key exists in a Map.
+// Create a Map to store information about countries
+const countryMap = new Map();
+
+// Add information about countries to the Map
+countryMap.set('Germany', {
+  capital: 'Berlin',
+  population: 83783942 // example population for 2020
+});
+
+countryMap.set('China', {
+  capital: 'Beijing',
+  population: 1444216107 // example population for 2020
+});
+
+countryMap.set('Mexico', {
+  capital: 'Mexico City',
+  population: 128932753 // example population for 2020
+});
+
+// Check if a specific key exists in the Map
+const keyToCheck = 'India';
+if (countryMap.has(keyToCheck)) {
+  const countryInfo = countryMap.get(keyToCheck);
+  console.log(`Information about ${keyToCheck}:`, countryInfo);
+} else {
+  console.log(`${keyToCheck} is not found in the Map.`);
+}
+
+
+
+
+*/
+
+
+
+
+/* 
+3.Develop a function that returns an array of values from a Map.
+function mapValuesToArray(inputMap) {
+  // Using the spread operator to convert Map values to an array
+  return [...inputMap.values()];
+}
+
+
+const countryMap = new Map();
+countryMap.set('Japan', { capital: 'Tokyo', population: 126476461 });
+countryMap.set('France', { capital: 'Paris', population: 65273511 });
+countryMap.set('Australia', { capital: 'Canberra', population: 25499884 });
+
+const valuesArray = mapValuesToArray(countryMap);
+console.log('Array of Map values:', valuesArray);
+
+
+
+*/
+
+
+
+/* 
+4.Use the forEach method to iterate over the entries of a Map and print them.
+
+// Create a Map
+const countryMap = new Map();
+countryMap.set("Germany", { capital: "Berlin", population: 83783942 });
+countryMap.set("China", { capital: "Beijing", population: 1444216107 });
+
+// Use forEach to iterate over entries and print them
+countryMap.forEach((value, key) => {
+  console.log(`${key}:`, value);
+});
+
+
+*/
+
+
+
+
+
+
+// SET
+
+/* 1.Write a program to find the union of two sets.
+
+const setA = new Set([1, 2, 3, 4]);
+const setB = new Set([3, 4, 5, 6]);
+
+// Find the union of setA and setB
+const unionResult = new Set([...setA, ...setB]);
+
+// Convert the result back to an array for easier display
+const unionArray = Array.from(unionResult);
+
+// Output the result
+console.log('Set A:', Array.from(setA));
+console.log('Set B:', Array.from(setB));
+console.log('Union of Set A and Set B:', unionArray);
+
+*/
+
+
+
+/* 2.Implement a function that checks if a given set is a subset of another set.
+
+function isSubset(subset, superset) {
+  // Iterate through the elements of the subset
+  for (const element of subset) {
+    // Check if each element is present in the superset
+    if (!superset.has(element)) {
+      return false; // If any element is not present, it's not a subset
+    }
+  }
+  return true; // All elements are present, it's a subset
+}
+
+// Example sets
+const setA = new Set([1, 2, 3]);
+const setB = new Set([1, 2, 3, 4, 5]);
+
+// Check if setA is a subset of setB
+const isSubsetResult = isSubset(setA, setB);
+
+// Output the result
+console.log('Set A:', Array.from(setA));
+console.log('Set B:', Array.from(setB));
+console.log('Is setA a subset of setB?', isSubsetResult);
+
+
+
+*/
+
+/* 3.Create a program that removes duplicate elements from an array using a Set.
+
+// Example array with duplicates
+const arrayWithDuplicates = [1, 2, 3, 4, 2, 3, 5, 6, 6, 7];
+
+// Use a Set to remove duplicates
+const arrayWithoutDuplicates = [...new Set(arrayWithDuplicates)];
+
+// Output the results
+console.log('Array with duplicates:', arrayWithDuplicates);
+console.log('Array without duplicates:', arrayWithoutDuplicates);
+
+
+*/
+
+
+
+
+/* 
+4.Develop a function that returns the intersection of two sets.
+function findIntersection(set1, set2) {
+  return new Set([...set1].filter(element => set2.has(element)));
+}
+
+
+const setA = new Set([1, 2, 3, 4]);
+const setB = new Set([3, 4, 5, 6]);
+
+// Find the intersection of setA and setB
+const intersectionResult = findIntersection(setA, setB);
+
+// Convert the result back to an array for easier display
+const intersectionArray = Array.from(intersectionResult);
+
+// Output the result
+console.log('Set A:', Array.from(setA));
+console.log('Set B:', Array.from(setB));
+console.log('Intersection of Set A and Set B:', intersectionArray);
+
+
+
+*/
+
+//LOOPS
+/*
+1.Create a program using a for...of loop to iterate over the elements of an array.
+
+const myArray = [1, 2, 3, 4, 5];
+
+// Using a for...of loop to iterate over the elements of the array
+for (const element of myArray) {
+  console.log(element);
+}
+
+ */
+
+
+
+/*
+2.Implement a while loop that prints the Fibonacci sequence up to the 10th term.
+
+// Initialize variables for the first two terms of the Fibonacci sequence
+let firstTerm = 0;
+let secondTerm = 1;
+
+// Counter for the number of terms printed
+let count = 0;
+
+// While loop to print the Fibonacci sequence up to the 10th term
+while (count < 10) {
+  console.log(firstTerm);
+
+  // Calculate the next term in the sequence
+  const nextTerm = firstTerm + secondTerm;
+
+  // Update variables for the next iteration
+  firstTerm = secondTerm;
+  secondTerm = nextTerm;
+
+  // Increment the counter
+  count++;
+}
+
+
+
+*/
+
+/*
+3.Write a program using the continue statement to skip odd numbers in a loop.
+
+
+
+
+
+ */
