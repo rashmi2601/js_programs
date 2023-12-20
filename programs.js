@@ -877,8 +877,332 @@ while (count < 10) {
 /*
 3.Write a program using the continue statement to skip odd numbers in a loop.
 
+// Example loop to print even numbers and skip odd numbers
+for (let i = 1; i <= 10; i++) {
+  // Skip odd numbers using the continue statement
+  if (i % 2 !== 0) {
+    continue;
+  }
+
+  // Print even numbers
+  console.log(i);
+}
 
 
 
 
  */
+
+
+
+
+/*
+4.Use the map method to square each element in an array and store the result in a new array.
+
+// Example array
+const originalArray = [1, 2, 3, 4, 5];
+
+// Use the map method to square each element and store the result in a new array
+const squaredArray = originalArray.map(element => element ** 2);
+
+// Output the result
+console.log('Original Array:', originalArray);
+console.log('Squared Array:', squaredArray);
+
+
+
+
+
+*/
+
+
+
+/*
+5.Develop a program that uses the break statement to exit a loop when a specific condition is met.
+
+// Example loop with a break statement
+for (let i = 1; i <= 10; i++) {
+  console.log(i);
+
+  // Exit the loop when the condition is met
+  if (i === 5) {
+    console.log('Condition met. Exiting the loop.');
+    break;
+  }
+}
+
+
+
+
+
+
+*/
+
+
+// OBJECTS
+
+/*
+1.Create a method within an object that concatenates two strings.
+
+const stringConcatenationObject = {
+  concatenateStrings: function (str1, str2) {
+    return str1 + str2;
+  }
+};
+
+
+const result = stringConcatenationObject.concatenateStrings('Hello, ', 'World!');
+console.log(result); // Output: Hello, World!
+
+
+
+
+
+*/
+
+
+
+
+/* 
+2.Write a program that checks if an object is empty.
+function isObjectEmpty(obj) {
+  return Object.keys(obj).length === 0;
+}
+
+// Example objects
+const emptyObject = {};
+const nonEmptyObject = { key: 'value' };
+
+// Check if objects are empty
+console.log('Is emptyObject empty?', isObjectEmpty(emptyObject)); // Output: true
+console.log('Is nonEmptyObject empty?', isObjectEmpty(nonEmptyObject)); // Output: false
+
+
+
+
+
+*/
+
+
+/*
+3.Implement an object constructor for a 'Car' with properties like model and year.
+
+// Car constructor function
+function Car(model, year) {
+  this.model = model;
+  this.year = year;
+}
+
+
+const myCar = new Car('Toyota Camry', 2022);
+
+// Accessing properties of the created car
+console.log('Car Model:', myCar.model); // Output: Toyota Camry
+console.log('Car Year:', myCar.year);   // Output: 2022
+
+
+
+
+*/
+
+
+
+/*
+4.Develop a function that deep clones an object (copies nested objects and arrays).
+
+
+
+
+
+
+*/
+
+
+
+
+/*
+5.Write a program that extracts all values from an object and stores them in an array.
+// Example object
+const myObject = {
+  name: 'John',
+  age: 30,
+  city: 'New York',
+  hobbies: ['reading', 'traveling']
+};
+
+// Extract values from the object and store them in an array
+const valuesArray = Object.values(myObject);
+
+// Output the result
+console.log('Original Object:', myObject);
+console.log('Values Array:', valuesArray);
+
+*/
+
+
+
+// ARRAYS 
+
+/*
+1.Create a function that returns the index of the first occurrence of a specific element in an array.
+
+function indexOfElement(array, element) {
+  return array.indexOf(element);
+}
+
+
+const myArray = [1, 2, 3, 4, 5];
+const elementToFind = 3;
+
+// Find the index of the first occurrence of the element
+const elementIndex = indexOfElement(myArray, elementToFind);
+
+// Output the result
+console.log('Array:', myArray);
+console.log(`Index of ${elementToFind}:`, elementIndex);
+
+
+
+*/
+
+
+/*
+2.Write a program that concatenates two arrays without modifying the original arrays.
+
+function concatenateArraysSpread(array1, array2) {
+  return [...array1, ...array2];
+}
+
+
+const arrayA = [1, 2, 3];
+const arrayB = ['a', 'b', 'c'];
+
+// Concatenate arrays without modifying the originals using spread
+const concatenatedArraySpread = concatenateArraysSpread(arrayA, arrayB);
+
+// Output the results
+console.log('Original Array A:', arrayA);
+console.log('Original Array B:', arrayB);
+console.log('Concatenated Array (using spread):', concatenatedArraySpread);
+
+
+
+
+
+
+*/
+
+
+/*
+3.Implement a function that removes duplicate elements from an array.
+
+function removeDuplicatesWithSet(array) {
+  return [...new Set(array)];
+}
+
+
+const arrayWithDuplicates = [1, 2, 3, 4, 2, 3, 5, 6, 6, 7];
+
+// Remove duplicates from the array using Set
+const arrayWithoutDuplicatesSet = removeDuplicatesWithSet(arrayWithDuplicates);
+
+// Output the results
+console.log('Array with Duplicates:', arrayWithDuplicates);
+console.log('Array without Duplicates (using Set):', arrayWithoutDuplicatesSet);
+
+
+
+
+
+*/
+
+
+/* 
+4.Use the reduce method to find the sum of all elements in an array.
+
+function sumArrayElements(array) {
+  return array.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+}
+
+
+const numbers = [1, 2, 3, 4, 5];
+
+// Find the sum of all elements in the array using reduce
+const sum = sumArrayElements(numbers);
+
+// Output the results
+console.log('Array:', numbers);
+console.log('Sum of Array Elements:', sum);
+
+
+
+
+
+*/
+
+
+/*
+5.Develop a program that checks if an array is sorted in ascending order.
+
+function isArraySortedAscending(array) {
+  for (let i = 0; i < array.length - 1; i++) {
+    if (array[i] > array[i + 1]) {
+      return false;
+    }
+  }
+  return true;
+}
+
+
+const sortedArray = [1, 2, 3, 4, 5];
+const unsortedArray = [5, 2, 8, 1, 4];
+
+// Check if arrays are sorted in ascending order
+const isSortedSorted = isArraySortedAscending(sortedArray);
+const isUnsortedSorted = isArraySortedAscending(unsortedArray);
+
+// Output the results
+console.log('Sorted Array:', sortedArray);
+console.log('Is sorted in ascending order?', isSortedSorted);
+
+console.log('Unsorted Array:', unsortedArray);
+console.log('Is sorted in ascending order?', isUnsortedSorted);
+
+
+
+
+*/
+
+
+// STRINGS
+
+/*
+1.Write a function that checks if a string is a valid palindrome, ignoring spaces and case.
+
+
+
+*/
+
+
+/*
+
+
+
+
+*/
+
+/*
+
+
+
+
+*/
+
+
+/*
+
+
+
+
+*/
+
