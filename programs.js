@@ -341,6 +341,8 @@ if (isElementInArray) {
 
 /* 
 1.Write a function that capitalizes the first letter of each word in a sentence.
+
+
 function capitalizeWords(sentence) {
   return sentence
     .split(" ")
@@ -411,6 +413,8 @@ console.log(`String without leading and trailing whitespace: '${result}'`);
 
 
 /* 4.Write a program that checks if a string contains a specific substring.
+
+
 function containsSubstring(mainString, substring) {
     return mainString.includes(substring);
 }
@@ -434,6 +438,7 @@ if (contains) {
 /*5.Implement a function to reverse words in a sentence without changing their order.
 
 function reverseWords(sentence) {
+
     // Split the sentence into an array of words
     const wordsArray = sentence.split(' ');
 
@@ -1179,6 +1184,399 @@ console.log('Is sorted in ascending order?', isUnsortedSorted);
 /*
 1.Write a function that checks if a string is a valid palindrome, ignoring spaces and case.
 
+function isPalindrome(str) {
+  const cleanedStr = str.replace(/[\s]/g, '').toLowerCase();
+  return cleanedStr === cleanedStr.split('').reverse().join('');
+}
+
+
+const palindromeString = 'A man a plan a canal Panama';
+const nonPalindromeString = 'Hello, World!';
+
+// Check if strings are valid palindromes
+const isPalindromeResult = isPalindrome(palindromeString);
+const isNonPalindromeResult = isPalindrome(nonPalindromeString);
+
+// Output the results
+console.log('String:', palindromeString);
+console.log('Is Palindrome?', isPalindromeResult);
+
+console.log('String:', nonPalindromeString);
+console.log('Is Palindrome?', isNonPalindromeResult);
+
+
+
+
+*/
+
+
+/*
+2.Create a program that replaces all occurrences of a specific word in a string.
+
+function replaceWord(inputString, targetWord, replacement) {
+  // Use the replace() method with a regular expression to replace all occurrences of the target word
+  var modifiedString = inputString.replace(new RegExp(targetWord, 'g'), replacement);
+  return modifiedString;
+}
+
+
+var inputString = "This is a sample sentence. Replace the word 'sample' with 'new'.";
+var targetWord = "sample";
+var replacement = "new";
+
+var modifiedString = replaceWord(inputString, targetWord, replacement);
+
+console.log("Original String:");
+console.log(inputString);
+
+console.log("\nModified String:");
+console.log(modifiedString);
+
+
+
+
+
+
+*/
+
+
+
+/*
+3. Implement a function that truncates a string to a specified length and adds ellipsis.
+
+function truncateString(str, maxLength) {
+  // Check if the string is longer than the specified length
+  if (str.length > maxLength) {
+    // Truncate the string and add ellipsis
+    return str.slice(0, maxLength) + '...';
+  } else {
+    // Return the original string if it's not longer than the specified length
+    return str;
+  }
+}
+
+
+var originalString = "This is a sample sentence that needs to be truncated.";
+var maxLength = 20;
+
+var truncatedString = truncateString(originalString, maxLength);
+
+console.log("Original String:");
+console.log(originalString);
+
+console.log("\nTruncated String:");
+console.log(truncatedString);
+
+
+
+
+
+
+*/
+
+
+/*
+4.Write a program that counts the occurrences of each character in a string.
+
+function countCharacters(inputString) {
+  return inputString.split('').reduce((charCount, char) => {
+    charCount[char] = (charCount[char] || 0) + 1;
+    return charCount;
+  }, {});
+}
+
+
+var inputString = "programming is fun";
+
+var result = countCharacters(inputString);
+
+console.log("Character Occurrences:");
+console.log(result);
+
+
+
+
+
+*/
+
+
+/*
+5.Develop a function that capitalizes the first letter of each sentence in a paragraph.
+
+
+function capitalizeSentences(paragraph) {
+  // Use a regular expression to find the end of sentences (periods followed by space)
+  var sentences = paragraph.split(/\. /);
+
+  // Capitalize the first letter of each sentence
+  var capitalizedSentences = sentences.map(function (sentence) {
+    return sentence.charAt(0).toUpperCase() + sentence.slice(1);
+  });
+
+  // Join the sentences back together with periods and spaces
+  var result = capitalizedSentences.join('. ');
+
+  return result;
+}
+
+
+var paragraph = "this is a sample paragraph. it has multiple sentences. let's capitalize the first letter of each.";
+
+var capitalizedParagraph = capitalizeSentences(paragraph);
+
+console.log("Original Paragraph:");
+console.log(paragraph);
+
+console.log("\nCapitalized Paragraph:");
+console.log(capitalizedParagraph);
+
+
+
+
+
+*/
+
+
+
+// Boolean
+
+/*
+1.Create a program that uses the ternary operator to determine if a number is even or odd.
+
+function checkEvenOdd(number) {
+  var result = (number % 2 === 0) ? "even" : "odd";
+  return result;
+}
+
+
+var numberToCheck = 7;
+
+console.log(numberToCheck + " is " + checkEvenOdd(numberToCheck));
+
+*/
+
+
+/*
+2.Implement a function that checks if an array contains only truthy values.
+
+function allTruthy(arr) {
+  // Use the every() method to check if all elements in the array are truthy
+  return arr.every(function(element) {
+    return !!element; // Convert the element to a boolean using the double negation (!!) operator
+  });
+}
+
+
+var array1 = [true, 1, "hello", 42];
+var array2 = [true, 1, "", 42];
+
+console.log("Array 1 is all truthy:", allTruthy(array1)); // true
+console.log("Array 2 is all truthy:", allTruthy(array2)); // false
+
+
+
+
+
+*/
+
+
+/*
+3.Write a program that uses the logical NOT operator to toggle a boolean variable.
+
+
+// Initial boolean variable
+var isToggle = false;
+
+// Toggle the boolean variable using the logical NOT operator
+isToggle = !isToggle;
+
+// Print the result
+console.log("Toggled value:", isToggle);
+
+
+*/
+
+
+
+/*
+4.Develop a function that checks if a variable is of type boolean.
+
+
+function isBoolean(variable) {
+  return typeof variable === 'boolean';
+}
+
+
+var boolVariable = true;
+var nonBoolVariable = "not a boolean";
+
+console.log("boolVariable is boolean:", isBoolean(boolVariable)); // true
+console.log("nonBoolVariable is boolean:", isBoolean(nonBoolVariable)); // false
+
+
+*/
+
+
+
+/*
+5.Use the XOR operator to swap the values of two boolean variables without using a temporary variable.
+
+
+function swapBooleans(a, b) {
+  // Use XOR to swap values without a temporary variable
+  a = a ^ b;
+  b = a ^ b;
+  a = a ^ b;
+
+  return [a, b];
+}
+
+
+var bool1 = true;
+var bool2 = false;
+
+console.log("Before swap: bool1 =", bool1, "bool2 =", bool2);
+
+// Call the function to swap values
+var result = swapBooleans(bool1, bool2);
+
+// Display the result
+console.log("After swap: bool1 =", result[0], "bool2 =", result[1]);
+
+
+
+
+
+*/
+
+
+
+// Symbol
+/* 
+1.Write a program that uses symbols as property keys in an object and prints them.
+
+
+// Creating symbols
+const symbol1 = Symbol('key1');
+const symbol2 = Symbol('key2');
+
+// Creating an object with symbols as property keys
+const myObject = {
+  [symbol1]: 'Value for symbol1',
+  [symbol2]: 'Value for symbol2'
+};
+
+// Accessing and printing values using symbols
+console.log("Value for symbol1:", myObject[symbol1]);
+console.log("Value for symbol2:", myObject[symbol2]);
+
+// Listing symbols used as keys in the object
+const symbolKeys = Object.getOwnPropertySymbols(myObject);
+console.log("Symbols used as keys:", symbolKeys);
+
+// Iterating through the symbols and their corresponding values
+for (const symbol of symbolKeys) {
+  console.log(`Symbol: ${symbol.toString()}, Value: ${myObject[symbol]}`);
+}
+
+
+
+
+
+*/
+
+
+
+/*
+2.Implement a function that checks if a value is a symbol.
+
+function isSymbol(value) {
+  return typeof value === 'symbol';
+}
+
+
+var symbol1 = Symbol('key1');
+var symbol2 = Symbol('key2');
+var stringValue = 'not a symbol';
+
+console.log("Is symbol1 a symbol?", isSymbol(symbol1)); // true
+console.log("Is symbol2 a symbol?", isSymbol(symbol2)); // true
+console.log("Is stringValue a symbol?", isSymbol(stringValue)); // false
+
+
+
+*/
+
+
+/*
+3.Create a program that uses the Object.getOwnPropertySymbols method to retrieve all symbols from an object.
+
+
+// Create symbols
+const symbol1 = Symbol('key1');
+const symbol2 = Symbol('key2');
+
+// Create an object with symbols as properties
+const myObject = {
+  [symbol1]: 'Value for symbol1',
+  [symbol2]: 'Value for symbol2',
+  regularKey: 'Value for regularKey'
+};
+
+// Get all symbols from the object
+const symbolKeys = Object.getOwnPropertySymbols(myObject);
+
+// Print the symbols and their corresponding values
+console.log("Symbols and their values:");
+for (const symbol of symbolKeys) {
+  console.log(`Symbol: ${symbol.toString()}, Value: ${myObject[symbol]}`);
+}
+
+
+*/
+
+
+
+/*
+4.Develop a function that generates a unique symbol based on a given string.
+
+function generateUniqueSymbol(key) {
+  return Symbol(key);
+}
+
+
+var uniqueSymbol1 = generateUniqueSymbol('key1');
+var uniqueSymbol2 = generateUniqueSymbol('key2');
+
+console.log("Symbol for key1:", uniqueSymbol1);
+console.log("Symbol for key2:", uniqueSymbol2);
+
+// Check if symbols are unique
+console.log("Are the symbols unique?", uniqueSymbol1 !== uniqueSymbol2);
+
+
+
+
+
+*/
+
+
+
+// MAP  
+
+/*
+1.Write a program that merges two Maps into a new Map.
+
+
+
+
+
+*/
+
+
+/*
+
+
 
 
 */
@@ -1199,6 +1597,7 @@ console.log('Is sorted in ascending order?', isUnsortedSorted);
 */
 
 
+
 /*
 
 
@@ -1206,3 +1605,48 @@ console.log('Is sorted in ascending order?', isUnsortedSorted);
 
 */
 
+
+
+/*
+
+
+
+
+*/
+
+
+
+/*
+
+
+
+
+*/
+
+
+
+/*
+
+
+
+
+*/
+
+
+
+/*
+
+
+
+
+*/
+
+
+
+
+/*
+
+
+
+
+*/
